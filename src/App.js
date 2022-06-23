@@ -23,9 +23,12 @@ function App() {
     boxid={box.id} on={box.on} toggle={toggle} />))
 
   return (
-    <main>
-      {boxElements}
-    </main>
+    <>
+      <h2>click squares for random color changes</h2>
+      <main>
+        {boxElements}
+      </main>
+    </>
   );
 }
 

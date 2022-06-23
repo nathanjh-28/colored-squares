@@ -1,17 +1,15 @@
 import React from "react";
 
 export default function Box(props) {
-
-    // const [onState, setOnState] = React.useState(props.on)
-
-    // function handleOn() {
-    //     setOnState(prev => {
-    //         return !prev
-    //     })
-    // }
+    const colors = ['red', 'green', 'blue']
+    function getRandomColor(arr) {
+        const randomIdx = Math.floor(Math.random() * arr.length)
+        return arr[randomIdx]
+    }
+    const newColor = getRandomColor(colors)
 
     const styles = {
-        backgroundColor: props.on ? "#222" : "transparent"
+        backgroundColor: props.on ? newColor : "transparent"
 
     }
 
