@@ -1,12 +1,13 @@
 import React from "react";
 import './style.css'
 import boxData from './boxData'
+import Box from './Box'
 
 function App() {
 
   const [boxes, setBoxes] = React.useState(boxData)
 
-  const boxElements = boxes.map(box => (<div key={box.id} className="box"></div>))
+  const boxElements = boxes.map(box => (<Box key={box.id} on={box.on} />))
 
   return (
     <main>
