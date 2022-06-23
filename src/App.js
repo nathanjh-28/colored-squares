@@ -7,18 +7,15 @@ function App() {
 
   const [boxes, setBoxes] = React.useState(boxData)
 
-  function toggle(e) {
-    const idx = e.target.getAttribute('data-id') - 1
-    //console.log(idx)
-    setBoxes(prevState => {
-      const temp = prevState;
-      temp[idx].on = !prevState[idx].on
-      //console.log(temp)
-      return temp
+
+
+  function toggle(id) {
+    setBoxes(prevBoxes => {
+      return prevBoxes.map(box => {
+        return box.id === id ? { ...box, on: !box.on } : box
+      })
     })
   }
-
-  console.log(boxes)
 
 
   const boxElements = boxes.map(box => (<Box
