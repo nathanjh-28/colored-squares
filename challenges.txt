@@ -26,3 +26,12 @@ Create an event listener so when the box is clicked,
 it toggles from "on" to "off".
 
 Goal: clicking each box should toggle it on and off.
+
+
+    /**
+     * Challenge: Create a toggle() function that logs
+     * "clicked!" to the console
+     * 
+     * Pass that function down to each of the Box components
+     * and set it up so when they get clicked it runs the function
+     */
