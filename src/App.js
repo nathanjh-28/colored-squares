@@ -5,17 +5,21 @@ import Box from './Box'
 
 function App() {
 
+  const [boxes, setBoxes] = React.useState(boxData)
+
   function toggle(e) {
-    console.log(e.target.getAttribute('data-id'))
-    console.log('click!')
-    //   const key = e.target.getAttribute('data-id')
-    //   setBoxes(prevState => {
-    //     prevState[key - 1].on = !prevState[key - 1].on;
-    //     return prevState
-    //   })
+    const idx = e.target.getAttribute('data-id') - 1
+    //console.log(idx)
+    setBoxes(prevState => {
+      const temp = prevState;
+      temp[idx].on = !prevState[idx].on
+      //console.log(temp)
+      return temp
+    })
   }
 
-  const [boxes, setBoxes] = React.useState(boxData)
+  console.log(boxes)
+
 
   const boxElements = boxes.map(box => (<Box
     key={box.id}
