@@ -1,26 +1,32 @@
 export default [
     {
         id: 1,
-        on: true
+        on: true,
+        color: ''
     },
     {
         id: 2,
-        on: false
+        on: false,
+        color: ''
     },
     {
         id: 3,
-        on: true
+        on: true,
+        color: ''
     },
     {
         id: 4,
-        on: true
+        on: true,
+        color: ''
     },
     {
         id: 5,
-        on: false
+        on: false,
+        color: ''
     },
     {
         id: 6,
-        on: false
+        on: false,
+        color: ''
     },
 ]

@@ -14,3 +14,8 @@ main {
     margin: 1px;
     border-radius: 10%;
 }
+
+.button {
+    margin-top: 5em;
+    width: 100%;
+}

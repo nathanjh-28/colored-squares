@@ -17,6 +17,10 @@ function App() {
     })
   }
 
+  function addMore() {
+    console.log('click')
+  }
+
 
   const boxElements = boxes.map(box => (<Box
     key={box.id}
@@ -27,6 +31,7 @@ function App() {
       <h2>click squares for random color changes</h2>
       <main>
         {boxElements}
+        <button className="button" onClick={addMore}>add more</button>
       </main>
     </>
   );
