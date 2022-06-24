@@ -18,7 +18,9 @@ function App() {
   }
 
   function addMore() {
-    console.log('click')
+    setBoxes(prevBoxes => {
+      return [...prevBoxes, { id: prevBoxes.length + 1, on: false }]
+    })
   }
 
 
@@ -28,7 +30,6 @@ function App() {
 
   return (
     <>
-      <h2>click squares for random color changes</h2>
       <main>
         {boxElements}
         <button className="button" onClick={addMore}>add more</button>
